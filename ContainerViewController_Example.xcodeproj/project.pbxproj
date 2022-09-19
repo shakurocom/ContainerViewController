@@ -14,7 +14,6 @@
 		17C3806D288EC55200D3EE9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C3806B288EC55200D3EE9F /* LaunchScreen.storyboard */; };
 		17C38075288EC7D100D3EE9F /* ContainerViewController_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C38074288EC7D100D3EE9F /* ContainerViewController_Framework.framework */; };
 		17C38076288EC7D100D3EE9F /* ContainerViewController_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17C38074288EC7D100D3EE9F /* ContainerViewController_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3E7A0C014C7A37B3190B945C /* Pods_ContainerViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98515826E1D6F42767E93A3 /* Pods_ContainerViewController_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,9 +39,6 @@
 		17C3806C288EC55200D3EE9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17C3806E288EC55200D3EE9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C38074288EC7D100D3EE9F /* ContainerViewController_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ContainerViewController_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4374E9459DC83772328D328C /* Pods-ContainerViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContainerViewController_Example.release.xcconfig"; path = "Target Support Files/Pods-ContainerViewController_Example/Pods-ContainerViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
-		889F4EC2F1C934B1A8D30543 /* Pods-ContainerViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContainerViewController_Example.debug.xcconfig"; path = "Target Support Files/Pods-ContainerViewController_Example/Pods-ContainerViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F98515826E1D6F42767E93A3 /* Pods_ContainerViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContainerViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +47,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				17C38075288EC7D100D3EE9F /* ContainerViewController_Framework.framework in Frameworks */,
-				3E7A0C014C7A37B3190B945C /* Pods_ContainerViewController_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,20 +75,43 @@
 			isa = PBXGroup;
 			children = (
 				17C38060288EC55100D3EE9F /* AppDelegate.swift */,
-				17C38064288EC55100D3EE9F /* ExampleContainerViewController.swift */,
-				17C38066288EC55100D3EE9F /* Main.storyboard */,
-				17C38069288EC55200D3EE9F /* Assets.xcassets */,
-				17C3806B288EC55200D3EE9F /* LaunchScreen.storyboard */,
-				17C3806E288EC55200D3EE9F /* Info.plist */,
+				6B7B654E28D86D0F00C61C56 /* Resources */,
+				6B7B655028D86D1E00C61C56 /* UI */,
 			);
 			path = ContainerViewController_Example;
+			sourceTree = "<group>";
+		};
+		6B7B654E28D86D0F00C61C56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				17C3806E288EC55200D3EE9F /* Info.plist */,
+				17C38069288EC55200D3EE9F /* Assets.xcassets */,
+				6B7B654F28D86D1800C61C56 /* UI */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6B7B654F28D86D1800C61C56 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				17C3806B288EC55200D3EE9F /* LaunchScreen.storyboard */,
+				17C38066288EC55100D3EE9F /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6B7B655028D86D1E00C61C56 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				17C38064288EC55100D3EE9F /* ExampleContainerViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		89BE62480D4D85482C78ED26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				17C38074288EC7D100D3EE9F /* ContainerViewController_Framework.framework */,
-				F98515826E1D6F42767E93A3 /* Pods_ContainerViewController_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,8 +119,6 @@
 		DF7B50AFB5296989518780D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				889F4EC2F1C934B1A8D30543 /* Pods-ContainerViewController_Example.debug.xcconfig */,
-				4374E9459DC83772328D328C /* Pods-ContainerViewController_Example.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -114,13 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17C38071288EC55200D3EE9F /* Build configuration list for PBXNativeTarget "ContainerViewController_Example" */;
 			buildPhases = (
-				BA83E1114F947B914E61E222 /* [CP] Check Pods Manifest.lock */,
 				17C380BB288ED4A900D3EE9F /* Swiftlint script */,
 				17C38059288EC55100D3EE9F /* Sources */,
 				17C3805A288EC55100D3EE9F /* Frameworks */,
 				17C3805B288EC55100D3EE9F /* Resources */,
 				17C38077288EC7D100D3EE9F /* Embed Frameworks */,
-				59B0ED842ED2EC00868533AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,45 +209,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#debug log\nset -x\n\n${PODS_ROOT}/SwiftLint/swiftlint\n";
-		};
-		59B0ED842ED2EC00868533AB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ContainerViewController_Example/Pods-ContainerViewController_Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ContainerViewController_Example/Pods-ContainerViewController_Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ContainerViewController_Example/Pods-ContainerViewController_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA83E1114F947B914E61E222 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ContainerViewController_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -385,7 +360,6 @@
 		};
 		17C38072288EC55200D3EE9F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 889F4EC2F1C934B1A8D30543 /* Pods-ContainerViewController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContainerViewController_Example/Info.plist;
+				INFOPLIST_FILE = ContainerViewController_Example/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -415,7 +389,6 @@
 		};
 		17C38073288EC55200D3EE9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4374E9459DC83772328D328C /* Pods-ContainerViewController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -423,7 +396,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContainerViewController_Example/Info.plist;
+				INFOPLIST_FILE = ContainerViewController_Example/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
