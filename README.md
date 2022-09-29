@@ -10,6 +10,12 @@
 - [Usage](#usage)
 - [License](#license)
 
+`ContainerViewController` is a Swift component that allows you to present child controllers in parent container. `ContainerViewController` has various presentation animations:
+- push 
+- pop 
+- fade
+- custom
+
 ## Requirements
 
 - iOS 11.0+
