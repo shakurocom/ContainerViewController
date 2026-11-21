@@ -38,6 +38,23 @@ Then, run the following command:
 $ pod install
 ```
 
+### Swift Package Manager
+
+Add the package to the `dependencies` of your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/shakurocom/ContainerViewController.git", from: "1.0.1")
+```
+
+and the product to your target:
+
+```swift
+.product(name: "ContainerViewController", package: "ContainerViewController")
+```
+
+In Xcode, use File > Add Package Dependencies… with `https://github.com/shakurocom/ContainerViewController.git`.
+With SPM the module is `ContainerViewController` (`import ContainerViewController`); with CocoaPods it is `Shakuro_ContainerViewController`.
+
 ### Manually
 
 If you prefer not to use CocoaPods, you can integrate Shakuro.ContainerViewController simply by copying it to your project.
